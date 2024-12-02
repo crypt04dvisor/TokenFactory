@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #000000; /* Set background color to black */
+        color: #FFFFFF; /* Set text color to white */
+    }
+
+    header {
+        background-color: #444; /* Darker gray for better contrast */
+        color: white;
+        padding: 15px;
+        text-align: center;
+    }
+
+    header h1 {
+        color: #FFFFFF; /* Set header h1 text color to white */
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    h2 {
+        color: #FFFFFF; /* Set header h2 text color to white */
+    }
+
+    form {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    label {
+        font-weight: bold;
+        display: block;
+        margin-top: 10px;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+    }
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create ERC-20 Token</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.8.0/dist/web3.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Create BEP-20 Token</h1>
+    </header>
+
+    <main>
+        <section id="create-token">
+            <h2>Token Creation Form</h2>
+            <form id="create-token-form">
+                <label for="token-name">Token Name:</label>
+                <input type="text" id="token-name" required>
+
+                <label for="token-symbol">Token Symbol:</label>
+                <input type="text" id="token-symbol" required>
+
+                <label for="initial-supply">Initial Supply:</label>
+                <input type="number" id="initial-supply" required>
+
+                <label for="decimals">Decimals (default 18):</label>
+                <input type="number" id="decimals" value="18" required>
+
+                <button type="submit">Create Token & Pay $20</button>
+            </form>
+        </section>
+
+        <section id="payment">
+            <p><strong>Note:</strong> A $20 fee (in BNB) will be charged to deploy your token.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hash Factory</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
